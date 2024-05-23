@@ -14,8 +14,8 @@ export const PersonalHeader = () => {
 	const { publication } = useAppContext();
 
 	const navbarItems = publication.preferences.navbarItems.filter(hasUrl);
-	const visibleItems = navbarItems.slice(0, 2);
-	const hiddenItems = navbarItems.slice(2);
+	const visibleItems = navbarItems.slice();
+	// const hiddenItems = navbarItems.slice(2);
 
 	const navList = (
 		<ul className="flex list-none flex-row items-center gap-4 text-xs font-semibold uppercase tracking-tight text-neutral-600 dark:text-neutral-300">
@@ -27,7 +27,7 @@ export const PersonalHeader = () => {
 				</li>
 			))}
 
-			{hiddenItems.length > 0 && (
+			{/* {hiddenItems.length > 0 && ( {hiddenItems.map((item) => ( */}
 				{/* <li>
 					 <DropdownMenu.Root>
 						<DropdownMenu.Trigger asChild>
@@ -39,7 +39,7 @@ export const PersonalHeader = () => {
 								sideOffset={5}
 								align="end"
 							>
-								{hiddenItems.map((item) => (
+								
 									<DropdownMenu.Item asChild key={item.url}>
 										<a
 											href={item.url}
@@ -55,7 +55,7 @@ export const PersonalHeader = () => {
 						</DropdownMenu.Portal>
 					</DropdownMenu.Root> 
 				</li> */}
-			)}
+			{/* )} */}
 		</ul>
 	);
 
