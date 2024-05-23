@@ -28,11 +28,8 @@ export const PersonalHeader = () => {
 			))}
 
 			{hiddenItems.length > 0 && (
-				<li key={item.url}>
-					<a href={item.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
-						{item.label}
-					</a>
-					{/* <DropdownMenu.Root>
+				{/* <li>
+					 <DropdownMenu.Root>
 						<DropdownMenu.Trigger asChild>
 							<button>More</button>
 						</DropdownMenu.Trigger>
@@ -56,8 +53,8 @@ export const PersonalHeader = () => {
 								))}
 							</DropdownMenu.Content>
 						</DropdownMenu.Portal>
-					</DropdownMenu.Root> */}
-				</li>
+					</DropdownMenu.Root> 
+				</li> */}
 			)}
 		</ul>
 	);
